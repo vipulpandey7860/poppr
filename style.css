@@ -527,7 +527,7 @@ body {
     width: 47%;
 }
 
-#offering h4:nth-child(1)::after{
+#offering h4:nth-child(1)::after {
     content: "40";
     position: absolute;
     display: inline-block;
@@ -556,7 +556,7 @@ body {
     width: 68%;
 }
 
-#offering h4:nth-child(4)::after{
+#offering h4:nth-child(4)::after {
     content: "2";
     position: absolute;
     display: inline-block;
@@ -1488,5 +1488,223 @@ footer .footer-cover-parallax {
     background-color: #FFD074;
 
     transform: scale(1);
+
+}
+
+
+/* Responsive Part */
+
+
+@media only screen and (max-width: 500px) {
+
+
+    #loader>h3{
+        font-size: 10vw;
+    }
+
+    #main {
+        position: absolute;
+    }
+
+
+    #overlay {
+        position: absolute;
+    }
+
+    .moving-circle {
+        display: none;
+    }
+
+    .nav {
+        padding: 4vh 8vw;
+        position: fixed;
+        border-bottom: 1px solid #17F1D1;
+        background-color: #1D1D1F;
+    }
+
+    .nav .logo {
+        letter-spacing: -0.7vw;
+    }
+
+    .nav .button-menu {
+        gap: 3vw;
+    }
+
+    .logo-txt {
+        font-size: 7vw;
+
+    }
+
+    .button-outlined {
+        padding: 1vw 4vw;
+    }
+
+    #menu {
+        height: 9vw;
+        width: 9vw;
+    }
+
+    #line1 {
+        width: 4.5vw;
+    }
+
+    #line2 {
+        width: 4.5vw;
+    }
+
+    #page1 {
+        margin-top: 15vh;
+    }
+
+    .video {
+        width: 90vw;
+    }
+
+    .main-text {
+        align-items: center;
+        font-size: 7vw;
+        line-height: 14vw;
+        padding-right: 10vw;
+    }
+
+    .main-text span h1 {
+        letter-spacing: -1vw;
+    }
+
+    .main-text #m-btn {
+        display: initial;
+    }
+
+    .main-text span:nth-child(2) {
+        left: initial;
+    }
+
+    .main-text span:nth-child(3) {
+        align-self: auto;
+    }
+
+    .responsive-btn {
+        position: absolute !important;
+        top: 20vh;
+        font-size: 3vw;
+        left: 5vh;
+    }
+
+    .main-text span button {
+        padding: 2vw 4vw;
+    }
+
+
+    .left-arrow {
+        display: none;
+    }
+
+    #page2{
+        height: 40vh;
+    }
+
+    .text-content {
+        width: initial;
+        padding: 0 5vw;
+        gap: initial;
+    }
+
+    .sel-wrk {
+        font-size: 3vw;
+    }
+
+    .main-txt {
+        font-size: 6vw;
+        width: 60vw;
+    }
+
+    #page3 {
+        overflow: hidden;
+    }
+
+    .drag-cursor{
+        display: none;
+    }
+
+    .swiper{
+        height: initial;
+
+    }
+
+    .swiper-wrapper{
+        height: initial;
+
+    }
+
+    .swiper-slide{
+        height: 57vh;
+    }
+
+    .image{
+        height: 35vh;
+        border-radius: 15px;
+    }
+
+    .swiper-slide img{
+        height: 35vh;  
+        border-radius: 15px;
+
+    }
+
+    .texts{
+        top: initial;
+    }
+
+    .texts p{
+        font-size: 3vw;
+    }
+
+    .texts h3{
+        font-size: 3.7vw;
+        letter-spacing: -.5px;
+    }
+
+    .texts span{
+        font-size: 2vw;
+    }
+
+    #disc-btn{
+        font-size: 3.5vw;
+        padding: 2vw 6vw;
+    }
+
+    .top{
+        font-size: 5vw;
+    }
+
+    .middle{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .part1 h4,.part2 h4{
+        font-size: 2.4vw;
+    }
+
+    .part1 p, .part2 p{
+        font-size: 5vw;
+    }
+
+    .part1 a, .part2 a{
+        font-size: 3.3vw;
+    }
+
+    .reveal-image{
+        display: none;
+    }
+
+    #insight-btn{
+        font-size: 3.5vw;
+        padding: 2vw 6vw;
+    }
+
+
+
 
 }

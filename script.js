@@ -1,3 +1,36 @@
+function locoScroll() {
+  gsap.registerPlugin(ScrollTrigger);
+
+
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+    mobile: {
+      smooth: true,
+
+    },
+
+  });
+
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    },
+
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+  ScrollTrigger.refresh();
+
+}
+
 function cursorMove() {
   const mouse = document.querySelector(".moving-circle");
   document.body.addEventListener('mousemove', function (dets) {
@@ -19,34 +52,6 @@ function mainImageMovement() {
 
 
   })
-
-}
-
-function locoScroll() {
-  gsap.registerPlugin(ScrollTrigger);
-
-
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true
-  });
-
-  locoScroll.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    },
-
-    getBoundingClientRect() {
-      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-  ScrollTrigger.refresh();
 
 }
 
@@ -395,18 +400,42 @@ function mainPageAnim() {
 
 
 
-loader();
-cursorMove();
-locoScroll();
-mainImageMovement();
-leftArrow();
-NavHide();
-imagesScroll();
-ImageHover();
-imageReveal();
-footerScroll();
-eyeBall();
-OpenCloseButton();
-hovered();
-mainPageAnim();
 
+
+
+
+
+if (window.innerWidth <= 500) {
+  // load mobile script
+
+  locoScroll();
+  loader();
+  mainImageMovement();
+  leftArrow();
+  imagesScroll();
+  ImageHover();
+  imageReveal();
+  footerScroll();
+  eyeBall();
+  OpenCloseButton();
+  hovered();
+  mainPageAnim();
+
+}
+else { // viewportWidth width > 600
+  // load desktop script
+  locoScroll();
+  loader();
+  cursorMove();
+  mainImageMovement();
+  leftArrow();
+  NavHide();
+  imagesScroll();
+  ImageHover();
+  imageReveal();
+  footerScroll();
+  eyeBall();
+  OpenCloseButton();
+  hovered();
+  mainPageAnim();
+}
