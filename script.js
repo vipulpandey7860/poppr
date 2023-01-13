@@ -415,8 +415,6 @@ if (window.innerWidth <= 500) {
   imagesScroll();
   ImageHover();
   imageReveal();
-  footerScroll();
-  eyeBall();
   OpenCloseButton();
   hovered();
   mainPageAnim();
