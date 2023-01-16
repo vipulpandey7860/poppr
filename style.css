@@ -1441,6 +1441,12 @@ footer .footer-cover-parallax {
     gap: 1vw;
 }
 
+.social-links{
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
 .footer-links a {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
