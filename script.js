@@ -274,8 +274,6 @@ function OpenCloseButton() {
       line1.style.transform = `rotate(45deg) translate(0px, 1px)`;
       line2.style.transform = `rotate(-45deg) translate(4px, -5px)`;
 
-      line1.style.backgroundColor = '#111'
-      line2.style.backgroundColor = '#111'
 
       gsap.from("#offering>h4", {
         opacity: 0,
