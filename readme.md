@@ -30,8 +30,6 @@ The following tools and technologies were used in the creation of this project:
 - JavaScript
 - GSAP (for animations)
 
-Include links to any relevant documentation or resources for each technology.
-
 ## Project Status
 
 This project was created as a demonstration of HTML, CSS, and JavaScript skills, and is therefore not a live implementation of the website. It is intended solely as a portfolio piece and to showcase front-end development abilities.
